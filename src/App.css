@@ -1,38 +1,86 @@
+:root {
+  --black: #000000;
+  --text: #252525;
+  --white: #ffffff;
+  --blue: #b1e2ff;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text);
+  background-image: linear-gradient(79deg, #ffffff, #c7f1ff 48%, #e8dbff);
 }
 
-.App-link {
-  color: #61dafb;
+.form-container {
+  background-color: var(--blue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .form-container {
+    padding: 5rem;
+    border: 1px solid rgb(72, 72, 72);
+    border-radius: 10px;
+    margin: 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: .8rem;
+  border: none;
+  border-radius: 5rem;
+}
+
+button {
+  border: none;
+  background-color: var(--black);
+  padding: .8rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.submit {
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.submit:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--text);
+}
+
+.form-container p {
+  font-size: .8rem;
+}
+
+.link-btn {
+  background: none;
+  color: var(--text);
+  font-size: .8rem;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.link-btn:hover {
+  color: var(--black);
 }
